@@ -1,18 +1,20 @@
 import { create } from 'zustand';
 import {
+  addEdge,
+  applyNodeChanges,
+  applyEdgeChanges,
+} from '@xyflow/react';
+import type {
   Connection,
   Edge,
   EdgeChange,
   Node,
   NodeChange,
-  addEdge,
   OnNodesChange,
   OnEdgesChange,
   OnConnect,
-  applyNodeChanges,
-  applyEdgeChanges,
 } from '@xyflow/react';
-import { AnyNodeData, NodeType } from '../types/node.types';
+import type { AnyNodeData, NodeType } from '../types/node.types';
 import { v4 as uuidv4 } from 'uuid';
 
 export type AppNode = Node<AnyNodeData>;
@@ -86,11 +88,11 @@ export const useWorkflowStore = create<WorkflowState>((set, get) => ({
   },
 
   updateNodeData: (id: string, data: Partial<AnyNodeData>) => {
-    set({
-      nodes: get().nodes.map((node) =>
-        node.id === id ? { ...node, data: { ...node.data, ...data } } : node
+    set((state) => ({
+      nodes: state.nodes.map((node) =>
+        node.id === id ? { ...node, data: { ...node.data, ...data } as AnyNodeData } : node
       ),
-    });
+    }));
   },
 
   removeNode: (id: string) => {

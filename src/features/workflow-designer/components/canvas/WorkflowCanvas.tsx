@@ -5,13 +5,13 @@ import {
   Controls,
   MiniMap,
   ReactFlowProvider,
-  NodeTypes,
 } from '@xyflow/react';
+import type { NodeTypes } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
 import { useWorkflowStore } from '../../store/workflow.store';
 import { UniversalNode } from './UniversalNode';
-import { NodeType } from '../../types/node.types';
+import type { NodeType } from '../../types/node.types';
 
 const nodeTypes: NodeTypes = {
   universal: UniversalNode,

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sidebar } from './features/workflow-designer/components/sidebar/Sidebar';
 import { WorkflowCanvas } from './features/workflow-designer/components/canvas/WorkflowCanvas';
 import { NodeInspector } from './features/workflow-designer/components/forms/NodeInspector';

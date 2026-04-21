@@ -1,5 +1,4 @@
-import React from 'react';
-import { FieldSchema, AnyNodeData } from '../../types/node.types';
+import type { FieldSchema, AnyNodeData } from '../../types/node.types';
 
 interface DynamicFormProps {
   schema: FieldSchema[];

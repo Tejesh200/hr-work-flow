@@ -1,5 +1,6 @@
-import { Handle, Position, NodeProps } from '@xyflow/react';
-import { AppNode } from '../../store/workflow.store';
+import { Handle, Position } from '@xyflow/react';
+import type { NodeProps } from '@xyflow/react';
+import type { AppNode } from '../../store/workflow.store';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -24,7 +25,7 @@ const iconMap: Record<AppNode['data']['type'], string> = {
   end: '■',
 };
 
-export function UniversalNode({ id, data, selected }: NodeProps<AppNode>) {
+export function UniversalNode({ data, selected }: NodeProps<AppNode>) {
   const isStart = data.type === 'start';
   const isEnd = data.type === 'end';
   

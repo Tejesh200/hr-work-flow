@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useWorkflowStore } from '../../store/workflow.store';
-import { MockApiService, SimulationLog } from '../../api/workflow.api';
+import { MockApiService } from '../../api/workflow.api';
+import type { SimulationLog } from '../../api/workflow.api';
 import { cn } from '../canvas/UniversalNode';
 
 export function SimulationPanel() {

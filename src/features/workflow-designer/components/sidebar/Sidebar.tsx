@@ -1,5 +1,5 @@
 import React from 'react';
-import { NodeType } from '../../types/node.types';
+import type { NodeType } from '../../types/node.types';
 
 const nodeDraggableTypes: { type: NodeType; label: string; icon: string; description: string }[] = [
   { type: 'start', label: 'Start Trigger', icon: '▶', description: 'Entry point for the workflow.' },

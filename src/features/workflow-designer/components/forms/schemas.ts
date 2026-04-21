@@ -1,4 +1,4 @@
-import { NodeType, FieldSchema } from '../../types/node.types';
+import type { NodeType, FieldSchema } from '../../types/node.types';
 
 export const NodeSchemas: Record<NodeType, FieldSchema[]> = {
   start: [

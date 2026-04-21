@@ -1,6 +1,6 @@
 export type NodeType = 'start' | 'task' | 'approval' | 'automated' | 'end';
 
-export interface BaseNodeData {
+export interface BaseNodeData extends Record<string, unknown> {
   title: string;
   description?: string;
   type: NodeType;

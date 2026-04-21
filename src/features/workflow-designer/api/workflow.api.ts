@@ -1,5 +1,5 @@
-import { AppNode } from '../store/workflow.store';
-import { Edge } from '@xyflow/react';
+import type { AppNode } from '../store/workflow.store';
+import type { Edge } from '@xyflow/react';
 
 export interface AutomationAction {
   id: string;
